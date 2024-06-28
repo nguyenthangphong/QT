@@ -1,2 +1,2 @@
 # QT
-Learning QT6 with C++
+Qt 6 C++ GUI Development for Beginners : The Fundamentals

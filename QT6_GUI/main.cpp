@@ -1,11 +1,13 @@
-#include "mainwindow.h"
-
 #include <QApplication>
+#include "rockwidget.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+
+    RockWidget w;
+    w.setWindowTitle("Rock Widget");
     w.show();
+
     return a.exec();
 }

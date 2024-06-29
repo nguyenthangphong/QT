@@ -15,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     */
 
     /*
-        Functor Notation : Regular Slots
+        Functor Notation : Lambdas
     */
 
     connect(ui->myButton, &QPushButton::clicked, [=](){

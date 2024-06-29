@@ -6,25 +6,182 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>504</width>
+    <height>175</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Calory Counter</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>22</height>
-    </rect>
-   </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="caloryCountLabel">
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Calory Count:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="caloryCountNumberLabel">
+        <property name="font">
+         <font>
+          <pointsize>24</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>100</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="timeLabel">
+          <property name="text">
+           <string>Time(h):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="timeSpinBox">
+          <property name="value">
+           <double>1.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="scopeLabel">
+          <property name="text">
+           <string>Slope:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="slopeComboBox">
+          <item>
+           <property name="text">
+            <string>-5% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>-4% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>-3% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>-2% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>-1% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string> 0% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>+1% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>+2% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>+3% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>+4% grade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>+5% grade</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="weightLabel">
+          <property name="text">
+           <string>Weight(Kg):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="weightSpinBox">
+          <property name="value">
+           <double>70.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="speedLabel">
+          <property name="text">
+           <string>Speed(km/h):</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="speedSpinBox">
+          <property name="value">
+           <double>6.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

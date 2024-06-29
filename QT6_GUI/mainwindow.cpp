@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     */
 
     /*
-        Functor Notation : Lambas
+        Functor Notation : Lambdas
     */
 
     connect(ui->horizontalSlider, &QSlider::valueChanged, [=](){

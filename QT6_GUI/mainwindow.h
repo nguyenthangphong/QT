@@ -3,19 +3,18 @@
 
 #include <QMainWindow>
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    explicit MainWindow(QWidget *parent = nullptr);
 
+signals:
+
+    // QWidget interface
 private:
-    Ui::MainWindow *ui;
+    QSize sizeHint() const;
+    QAction *quitAction;
 };
+
 #endif // MAINWINDOW_H

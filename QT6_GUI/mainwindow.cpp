@@ -1,12 +1,39 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include <QPushButton>
+#include <QApplication>
+#include <QMenu>
+#include <QMenuBar>
+#include <QStatusBar>
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) : QMainWindow{parent}
 {
-    ui->setupUi(this);
+    // Add Central Widget
+    QPushButton *button = new QPushButton("Hello", this);
+    setCentralWidget(button);
+
+    // Declare Quit Action
+    quitAction = new QAction("Quit");
+
+    // This memory is not managed by the window, you have to release it yourself
+    connect(quitAction, &QAction::triggered, [=](){
+        QApplication::quit();
+    });
+
+    // Add Menus
+    QMenu *fileMenu = menuBar()->addMenu("File");
+    fileMenu->addAction(quitAction);
+    menuBar()->addMenu("Edit");
+    menuBar()->addMenu("Window");
+    menuBar()->addMenu("Settings");
+    menuBar()->addMenu("Helps");
+
+    // Add Status Bar Message
+    statusBar()->showMessage("Uploading file...");
+    statusBar()->clearMessage();
 }
 
-MainWindow::~MainWindow()
+
+QSize MainWindow::sizeHint() const
 {
-    delete ui;
+    return QSize(800, 500);
 }

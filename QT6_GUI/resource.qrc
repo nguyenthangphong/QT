@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Kobie_Mainoo.png</file>
+    </qresource>
+</RCC>
